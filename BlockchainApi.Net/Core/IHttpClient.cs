@@ -1,7 +1,8 @@
-﻿using System;
+﻿using BlockchainApi.Net.Core;
+using System;
 using System.Threading.Tasks;
 
-namespace BlockchainApi.Net.Client
+namespace BlockchainApi.Net.Core
 {
 	public interface IHttpClient : IDisposable
 	{

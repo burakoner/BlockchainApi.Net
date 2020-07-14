@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlockchainApi.Net.Client;
+using BlockchainApi.Net.Core;
 using BlockchainApi.Net.Models;
 
 namespace BlockchainApi.Net.Receive
@@ -13,7 +13,7 @@ namespace BlockchainApi.Net.Receive
         public Receive(IHttpClient httpClient = null)
         {
             this.httpClient = (httpClient == null)
-                ? new BlockchainHttpClient("https://api.blockchain.info/v2")
+                ? new ApiHttpClient("https://api.blockchain.info/v2")
                 : httpClient;
         }
 

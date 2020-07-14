@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using BlockchainApi.Net.Client;
+using BlockchainApi.Net.Core;
 using BlockchainApi.Net.Models;
 
 namespace BlockchainApi.Net.Wallet
@@ -14,7 +14,7 @@ namespace BlockchainApi.Net.Wallet
 
         public WalletCreator()
         {
-            httpClient = new BlockchainHttpClient(uri: "http://127.0.0.1:3000");
+            httpClient = new ApiHttpClient(uri: "http://127.0.0.1:3000");
         }
 
         public WalletCreator(IHttpClient httpClient)
@@ -32,7 +32,7 @@ namespace BlockchainApi.Net.Wallet
 		/// <param name="email">Email to associate with the new wallet</param>
 		/// <returns>An instance of the CreateWalletResponse class</returns>
 		/// <exception cref="ServerApiException">If the server returns an error</exception>
-		public async Task<CreateWalletResponse> CreateAsync(string password, string privateKey = null, string label = null, string email = null)
+		public async Task<CreateWalletResponse> CreateAsync(string password, string privateKey = null, string label = null, string email = null, bool hd=false)
 		{
             if (string.IsNullOrWhiteSpace(password))
             {
@@ -48,11 +48,11 @@ namespace BlockchainApi.Net.Wallet
                 ApiCode = httpClient.ApiCode,
                 PrivateKey = privateKey,
                 Label = label,
-                Email = email
+                Email = email,
+                HD = hd
             };
 
-            var newWallet = await httpClient.PostAsync<CreateWalletRequest, CreateWalletResponse>("api/v2/create/", request, contentType: "application/json");
-            return newWallet;
+            return await httpClient.PostAsync<CreateWalletRequest, CreateWalletResponse>("api/v2/create/", request, contentType: "application/json");
 		}
     }
 }

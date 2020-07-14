@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using BlockchainApi.Net.Client;
+using BlockchainApi.Net.Core;
 
 namespace BlockchainApi.Net.PushTx
 {
@@ -13,7 +13,7 @@ namespace BlockchainApi.Net.PushTx
         private readonly IHttpClient httpClient;
         public TransactionPusher()
         {
-            httpClient = new BlockchainHttpClient();
+            httpClient = new ApiHttpClient();
         }
         public TransactionPusher(IHttpClient httpClient)
         {

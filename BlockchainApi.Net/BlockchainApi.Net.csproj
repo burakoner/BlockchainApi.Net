@@ -8,21 +8,22 @@
   <PropertyGroup>
     <PackageId>BlockchainApi.Net</PackageId>
     <Authors>Burak Öner</Authors>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Description>BlockchainApi.Net is a .Net Standard API Wrapper for the blockchain.com / blockchain.info. It includes all features the API provides, REST API and Websocket.</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageTags>BlockchainApi BlockchainApi.Net C# .Net Standard blockchain.com blockchain.info API wrapper</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <NeutralLanguage>en</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>1.0.0 - First Release of .netstandard version of BlockchainAPI</PackageReleaseNotes>
+    <PackageReleaseNotes>1.0.1 - 14 July 2020 - Updated namespaces, fixed minor bugs
+1.0.0 - 13 July 2020 - First Release of .netstandard version of BlockchainAPI</PackageReleaseNotes>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl />
     <PackageProjectUrl>https://github.com/burakoner/BlockchainApi.Net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/burakoner/BlockchainApi.Net</RepositoryUrl>
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Icon\" />

@@ -1,4 +1,4 @@
-namespace BlockchainApi.Net.BlockExplorer
+namespace BlockchainApi.Net.Enums
 {
     public enum FilterType
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlockchainApi.Net.Client;
+using BlockchainApi.Net.Core;
 using BlockchainApi.Net.Models;
 
-namespace BlockchainApi.Net.ExchangeRates
+namespace BlockchainApi.Net.Explorers
 {
 	/// <summary>
 	/// This class reflects the functionality documented at https://blockchain.info/api/exchange_rates_api.
@@ -16,7 +16,7 @@ namespace BlockchainApi.Net.ExchangeRates
 
 		public ExchangeRateExplorer()
 		{
-			httpClient = new BlockchainHttpClient();
+			httpClient = new ApiHttpClient();
 		}
 
 		internal ExchangeRateExplorer(IHttpClient httpClient)

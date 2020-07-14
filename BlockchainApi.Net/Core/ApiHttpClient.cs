@@ -3,25 +3,26 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using BlockchainApi.Net.Exceptions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace BlockchainApi.Net.Client
+namespace BlockchainApi.Net.Core
 {
-	public class BlockchainHttpClient : IHttpClient
+	public class ApiHttpClient : IHttpClient
 	{
 		private const string BASE_URI = "https://blockchain.info";
         private const int TIMEOUT_MS = 100000;
 		private readonly HttpClient httpClient;
 		public string ApiCode { get; set; }
 
-		public BlockchainHttpClient(string apiCode = null, string uri = BASE_URI)
+		public ApiHttpClient(string apiCode = null, string uri = BASE_URI)
 		{
 			ApiCode = apiCode;
 			httpClient = new HttpClient
 			{
 				BaseAddress = new Uri(uri),
-				Timeout = TimeSpan.FromMilliseconds(BlockchainHttpClient.TIMEOUT_MS)
+				Timeout = TimeSpan.FromMilliseconds(ApiHttpClient.TIMEOUT_MS)
 			};
 		}
 

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlockchainApi.Net.Client;
+using BlockchainApi.Net.Core;
 using BlockchainApi.Net.Models;
-using BlockchainApi.Net.Json;
 using Newtonsoft.Json;
+using BlockchainApi.Net.Converters;
 
 namespace BlockchainApi.Net.Wallet
 {
@@ -13,7 +13,7 @@ namespace BlockchainApi.Net.Wallet
     /// at https://blockchain.info/api/blockchain_wallet_api. It allows users to interact
     /// with their Blockchain.info wallet.
     /// </summary>
-    public class Wallet
+    public class WalletManager
     {
         private readonly IHttpClient httpClient;
         private readonly string identifier;
@@ -26,7 +26,7 @@ namespace BlockchainApi.Net.Wallet
         /// <param name="identifier">Wallet identifier (GUID)</param>
         /// <param name="password">Decryption password</param>
         /// <param name="secondPassword">Second password</param>
-        internal Wallet(IHttpClient httpClient, string identifier, string password, string secondPassword = null)
+        internal WalletManager(IHttpClient httpClient, string identifier, string password, string secondPassword = null)
         {
             this.httpClient = httpClient;
             this.identifier = identifier;

@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace BlockchainApi.Net.Json
+namespace BlockchainApi.Net.Converters
 {
 	internal class TrueTrumpsAllJsonConverter : JsonConverter
 	{

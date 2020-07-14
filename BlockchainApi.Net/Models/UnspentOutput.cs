@@ -1,5 +1,5 @@
 ﻿using System.Collections.ObjectModel;
-using BlockchainApi.Net.Json;
+using BlockchainApi.Net.Converters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 

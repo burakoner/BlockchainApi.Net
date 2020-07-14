@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BlockchainApi.Net.Client;
+using BlockchainApi.Net.Core;
 using BlockchainApi.Net.Models;
 
-namespace BlockchainApi.Net.Statistics
+namespace BlockchainApi.Net.Explorers
 {
 	/// <summary>
 	/// This class allows users to get the bitcoin network statistics.
@@ -15,7 +15,7 @@ namespace BlockchainApi.Net.Statistics
 		private readonly IHttpClient httpClient;
 		public StatisticsExplorer()
 		{
-			httpClient = new BlockchainHttpClient("https://api.blockchain.info");
+			httpClient = new ApiHttpClient("https://api.blockchain.info");
 		}
 		internal StatisticsExplorer(IHttpClient httpClient)
 		{

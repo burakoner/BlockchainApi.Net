@@ -2,7 +2,7 @@
 using BlockchainApi.Net.Models;
 using Newtonsoft.Json;
 
-namespace BlockchainApi.Net.Json
+namespace BlockchainApi.Net.Converters
 {
 	internal class BitcoinValueJsonConverter : JsonConverter
 	{

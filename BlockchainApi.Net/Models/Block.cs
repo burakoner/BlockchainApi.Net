@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using BlockchainApi.Net.Json;
+using BlockchainApi.Net.Converters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 

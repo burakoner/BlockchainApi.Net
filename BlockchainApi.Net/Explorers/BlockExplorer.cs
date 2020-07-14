@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
-using BlockchainApi.Net.Client;
-using BlockchainApi.Net.Json;
+using BlockchainApi.Net.Core;
+using BlockchainApi.Net.Converters;
+using BlockchainApi.Net.Enums;
 using BlockchainApi.Net.Models;
 
-namespace BlockchainApi.Net.BlockExplorer
+namespace BlockchainApi.Net.Explorers
 {
 	/// <summary>
 	/// The BlockExplorer class reflects the functionality documented at
@@ -23,7 +24,7 @@ namespace BlockchainApi.Net.BlockExplorer
 
 		public BlockExplorer()
 		{
-			httpClient  = new BlockchainHttpClient();
+			httpClient  = new ApiHttpClient();
 		}
 
 		internal BlockExplorer(IHttpClient httpClient)

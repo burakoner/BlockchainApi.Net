@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using BlockchainApi.Net.Json;
+using BlockchainApi.Net.Converters;
 
 namespace BlockchainApi.Net.Models
 {

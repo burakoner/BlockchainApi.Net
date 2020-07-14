@@ -17,5 +17,7 @@ namespace BlockchainApi.Net.Models
 		public string Password { get; set; }
 		[JsonProperty("privateKey")]
 		public string PrivateKey { get; set; }
+		[JsonProperty("hd")]
+		public bool HD { get; set; }
 	}
 }

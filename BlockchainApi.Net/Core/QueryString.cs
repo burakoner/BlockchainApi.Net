@@ -1,7 +1,8 @@
+using BlockchainApi.Net.Exceptions;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BlockchainApi.Net.Client
+namespace BlockchainApi.Net.Core
 {
     public class QueryString
     {
